@@ -99,3 +99,48 @@ Optimised for contracts governed by laws of:
 
 ## ⚙️ Run Locally
 ```bash
+git clone https://github.com/Sandypaluk/contract-intelligence-tool
+cd contract-intelligence-tool
+npm install
+cp .env.example .env
+# Add your ANTHROPIC_API_KEY to .env
+npm run dev
+```
+
+Open http://localhost:5173
+
+## 🧠 How It Works
+1. User uploads a PDF contract via drag-and-drop interface
+2. Backend extracts raw text using pdf-parse library
+3. Extracted text is sent to Claude API in a single optimised call
+4. Claude returns structured JSON with all analysis sections
+5. Frontend renders a full intelligence dashboard with 
+   collapsible sections
+6. User can ask follow-up questions via the interactive Q&A chat
+7. Full analysis exportable as PDF report or JSON
+## ⚡ Engineering Decisions
+
+**Single API call architecture:**
+All analysis — extraction, risk scoring, obligations tracking, 
+plain English summary — happens in one Claude API call returning 
+structured JSON. This minimises latency and cost while maximising 
+consistency of output.
+
+**Server-side PDF parsing:**
+PDF text extraction happens on the Express backend, not in the 
+browser. This handles large files efficiently and keeps processing 
+off the client device.
+
+## 💼 Why This Matters for PropTech
+Co-ownership vacation home transactions involve complex multi-party 
+agreements across different European legal systems. A tool that 
+instantly surfaces risks and obligations doesn't just save time — 
+it reduces legal liability, builds buyer confidence, and directly 
+accelerates sales cycles by eliminating the legal review bottleneck 
+that delays closings.
+
+In a company processing 50+ contracts per month, this tool saves 
+an estimated 100-150 hours of legal review time monthly.
+
+## 👩‍💻 Built By
+Sandra Paluku — AI & Automation Builder
