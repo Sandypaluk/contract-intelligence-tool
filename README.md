@@ -8,7 +8,7 @@ Built with Claude API to eliminate manual document review for legal,
 operations and sales teams handling high volumes of property agreements.
 
 ## 🚀 Live Demo
-[Live App]((https://contract-intelligence-tool.vercel.app/))
+[Live App]([https://contract-intelligence-tool.vercel.app/])
 
 ## 💡 The Problem It Solves
 Real estate transactions involve mountains of legal paperwork — 
