@@ -59,7 +59,7 @@ Guidelines:
 - If the question involves financial, tax, or complex legal advice, note that the buyer should consult a qualified solicitor or notary in the relevant jurisdiction`;
 
     const message = await client.messages.create({
-      model: 'claude-sonnet-4-20250514',
+      model: 'claude-sonnet-4-5',
       max_tokens: 1024,
       temperature: 0.3,
       messages: [{ role: 'user', content: prompt }],
